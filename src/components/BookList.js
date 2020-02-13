@@ -4,7 +4,7 @@ import { BookContext } from "../contexts/BookContext"
 
 const BookList = () => {
   const { isLightTheme, light, dark } = useContext(ThemeContext)
-  const {books} = useContext(BookContext)
+  const { books } = useContext(BookContext)
   const theme = isLightTheme ? light : dark
   return (
     <div
@@ -12,9 +12,13 @@ const BookList = () => {
       style={{ color: theme.syntax, background: theme.bg }}
     >
       <ul>
-          {books.map(book => {
-              <li key={book.key} style={{ background: theme.ui }}>{book.title}</li>
-          })}
+        {books.map(book => {
+          return (
+            <li key={book.key} style={{ background: theme.ui }}>
+              {book.title}
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

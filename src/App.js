@@ -11,11 +11,11 @@ function App() {
     <div className="App">
       <ThemeContextProvider>
         <AuthContextProvider>
-            <Navbar />
-            <BookContextProvider>
-                <BookList />
-            </BookContextProvider>
-            <ThemeToggle />
+          <Navbar />
+          <BookContextProvider>
+            <BookList />
+          </BookContextProvider>
+          <ThemeToggle />
         </AuthContextProvider>
       </ThemeContextProvider>
     </div>
